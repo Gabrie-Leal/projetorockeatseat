@@ -13,7 +13,7 @@ function trocarmodo(){
    }
 
    if(html.classList.contains('light')){
-    imagem.setAttribute('alt','Outra coisa')
+    imagem.setAttribute('alt','Foto do Mayky Brito, um ótimo professor!')
    }
    else{
     imagem.setAttribute('alt','Foto de Mayky Brito de óculos e camisa preta, fundo amarelo')
