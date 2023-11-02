@@ -1,0 +1,151 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /*
+    background-image: url(bg-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    */
+
+    background: var(--bg-url) no-repeat top center/cover;
+}
+body *{
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+}
+/*Root-> criação de variáveis que vão mudaro ao ativar a classe light
+Root é as originais, a .light são as mudanças
+*/
+:root{
+    --text-color: #ffff;
+    --bg-url:url(bg-mobile.jpg);
+    --stroke-color:rgba(255, 255, 255, 0.5);
+    --surface-color:rgba(255, 255, 255, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --highlight-color:rgba(255, 255, 255, 0.2);
+    --sol:url(moon-stars.svg);
+}
+.light{
+    --text-color:black;
+    --bg-url:url(bg-mobile-light.jpg);
+    --stroke-color:rgba(0, 0, 0, 0.5);
+    --surface-color:rgba(0, 0, 0, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --highlight-color:rgba(0, 0, 0, 0.1);
+    --sol:url(sun.svg);
+}
+#container{
+    width: 360px;
+    padding: 0 24px;
+    margin: 56px auto 0px;/*relogio top, right, botton , left*/
+}
+
+/*Profile*/
+#profile{
+    text-align: center;
+    padding: 24px;
+}
+
+#profile img{
+    width:112px;
+}
+
+#profile p{
+    font-weight: 500;
+    line-height: 24px;
+    padding: 8px;
+}
+
+/*Botão*/
+
+#botao{
+    position: relative; /*Faz a posição do position dentro do button seja
+    relativo a div botao*/
+    width: 64px;   
+    margin:4px auto; /*cima/baixo direita/esquerda*/
+}
+.light #botao button{
+    right:0;
+    left:initial; /*Modo inicial*/
+} 
+
+#botao span{
+    display: block;
+    height:24px;
+    width:64px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    border-radius: 9999px;
+}
+#botao button{
+    width: 32px;
+    height:32px;
+    background: white var(--sol) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+    position: absolute; /*Pra sobrepor o span*/
+    left:0;
+    z-index:1; /*Pra ficar 1 camada acima do span */
+    transform: translateY(-50%); /*Posiciona o elemento ao eixo y*/
+    top:50%;
+}
+
+/*Lista/links*/
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;/*espaço entre os elementos*/
+    padding: 24px 0;
+}
+ul li a{
+    display: flex;
+    justify-content: center;/*eixo x*/
+    padding: 16px 24px;
+    align-items: center;/*eixo y*/
+    background: var(--surface-color);/*red green blue alfa/transparencia*/
+    border-radius: 8px;
+    backdrop-filter: blur(4px);/*embaçamento*/
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.5s;
+    border: 1px solid var(--stroke-color);
+}
+
+/*pseudo-selector*/
+
+ul li a:hover{
+    background:var(--surface-color-hover);
+    border: 1.5px solid var(--text-color);
+}
+
+#social{
+    display: flex;
+    padding:24px 0px; /*cima e embaixo*/
+    font-size:24px;
+    justify-content: center;
+}
+#social a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    transition: background 0.2s;
+    border-radius: 50%; /*bolinha perfeita*/
+}
+#social a:hover{
+    background: var(--highlight-color);
+}
+footer{
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 0;
+    gap:4px;
+}
