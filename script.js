@@ -6,17 +6,17 @@ function trocarmodo(){
    const imagem = document.querySelector("#profile img")
 
    if(html.classList.contains('light')){
-    imagem.setAttribute('src', 'avatar-light.png')
+    imagem.setAttribute('src', 'perfilbranco.jpg')
    }
    else{
-    imagem.setAttribute('src','avatar.png')
+    imagem.setAttribute('src','Perfil.jpg')
    }
 
    if(html.classList.contains('light')){
-    imagem.setAttribute('alt','Foto do Mayky Brito, um ótimo professor!')
+    imagem.setAttribute('alt','Foto de Gabriel Leal, no ano novo')
    }
    else{
-    imagem.setAttribute('alt','Foto de Mayky Brito de óculos e camisa preta, fundo amarelo')
+    imagem.setAttribute('alt','Foto de Gabriel Leal tímido')
    }
    
 }

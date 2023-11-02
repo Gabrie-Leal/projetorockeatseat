@@ -52,7 +52,11 @@ Root é as originais, a .light são as mudanças
 }
 
 #profile img{
-    width:112px;
+    width: 112px;
+    max-width: 300px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 #profile p{
