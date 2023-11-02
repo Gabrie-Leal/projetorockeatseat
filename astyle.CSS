@@ -42,7 +42,6 @@ Root é as originais, a .light são as mudanças
 #container{
     width: 100%;
     max-width: 588px;
-    padding: 0 24px;
     margin: 56px auto 0px;/*relogio top, right, botton , left*/
 }
 
@@ -71,8 +70,7 @@ Root é as originais, a .light são as mudanças
     margin:4px auto; /*cima/baixo direita/esquerda*/
 }
 .light #botao button{
-    right:0;
-    left:initial; /*Modo inicial*/
+    animation: arrastar 0.4s forwards; /*forwards: faz manter as propriedades da animação, no caso terminar em left*/
 } 
 
 #botao span{
@@ -83,6 +81,10 @@ Root é as originais, a .light são as mudanças
     border: 1px solid var(--stroke-color);
     backdrop-filter: blur(4px);
     border-radius: 9999px;
+}
+#botao button:hover{
+    outline: 8px solid var(--highlight-color);
+    /*Adicina uma borda diferente da border, melhor de usar nesse quesíto*/
 }
 #botao button{
     width: 32px;
@@ -95,6 +97,8 @@ Root é as originais, a .light são as mudanças
     z-index:1; /*Pra ficar 1 camada acima do span */
     transform: translateY(-50%); /*Posiciona o elemento ao eixo y*/
     top:50%;
+
+    animation: arrastar2 0.4s;
 }
 
 /*Lista/links*/
@@ -152,7 +156,7 @@ footer{
     gap:4px;
 }
 
-/*Midia queries, faz o dimensionamento da tela*/
+/*Midia queries, faz o dimensionamento da*/
 
 @media (min-width:700px){
     :root{
@@ -160,5 +164,26 @@ footer{
     }
     .light{
         --bg-url: url(bg-desktop-light.jpg);
+    }
+}
+
+/*Animação*/
+
+@keyframes arrastar{
+    from{
+        left:0;/*Onde vai começar por causa do .light #botao button{
+            right:0;*/
+    }
+    to{
+        left:50%;  /*Onde vai acabar*/
+    }
+}
+
+@keyframes arrastar2{
+    from{
+        left:50%;
+    }
+    to{
+        right:0;
     }
 }
