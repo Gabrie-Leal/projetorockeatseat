@@ -84,7 +84,8 @@ Root é as originais, a .light são as mudanças
 }
 #botao button:hover{
     outline: 8px solid var(--highlight-color);
-    /*Adicina uma borda diferente da border, melhor de usar nesse quesíto*/
+    /*Adicina uma borda diferente da border, 
+    melhor de usar nesse quesíto*/
 }
 #botao button{
     width: 32px;
