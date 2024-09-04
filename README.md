@@ -1,9 +1,4 @@
-<h1 align="center">Projetinho</h1>
+<h1 align="center">Página de um possível portifólio</h1>
 
-<p align="center">Projeto de Web feito junto com o curso da RockeatSeat</p>
-
-<p align="center">
-    <img src="Fundoc.png">
-</p>
-
-<p align="center">Com o tempo vou melhorar, prometo!</p>
+<p align="center">Projeto de Web realizado em conjunto ao curso da Rockeatseat</p>
+<p align="center">Consegui colocar em prática meus conhecimentos em HTML, CSS e principalmente JS. Onde superei dificuldade e consegui aprender o uso de root em CSS e manipulação de DOM.</p>
